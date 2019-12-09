@@ -1,0 +1,7 @@
+DEBUG	2019-12-09 13:05:44,058	0	devpinoyLogger	[main]	Config File Loaded
+DEBUG	2019-12-09 13:05:44,058	0	devpinoyLogger	[main]	OR File Loaded
+DEBUG	2019-12-09 13:05:47,567	3509	devpinoyLogger	[main]	Chrome Launched
+DEBUG	2019-12-09 13:05:48,663	4605	devpinoyLogger	[main]	Nevigated to : http://www.way2automation.com/angularjs-protractor/banking/#/login
+DEBUG	2019-12-09 13:05:53,163	9105	devpinoyLogger	[main]	Inside Loging Test
+DEBUG	2019-12-09 13:05:56,235	12177	devpinoyLogger	[main]	Login Successfully Executed
+DEBUG	2019-12-09 13:06:07,153	23095	devpinoyLogger	[main]	Test Execution Completed...
