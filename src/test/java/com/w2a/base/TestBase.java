@@ -88,16 +88,18 @@ public class TestBase {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			
+			if (System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
+				browser=System.getenv(browser);
+			}else {
+				browser=config.getProperty("browser");
+			}
+			
+			config.setProperty("browser", browser);
 		}
 		
 		
-		if (System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
-			browser=System.getenv(browser);
-		}else {
-			browser=config.getProperty("browser");
-		}
 		
-		config.setProperty("browser", browser);
 		
 		if(config.getProperty("browser").equals("firefox")){
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\\\geckodriver.exe");
