@@ -89,27 +89,27 @@ public class TestBase {
 				e.printStackTrace();
 			}
 			
-			if (System.getenv("browser")!=null && !System.getenv("browser").isEmpty()) {
-				browser=System.getenv(browser);
-			}else {
-				browser=config.getProperty("browser");
-			}
-			
-			config.setProperty("browser", browser);
 		}
 		
 		
+		if (System.getProperty("browser")!=null && !System.getProperty("browser").isEmpty()) {
+			browser=System.getProperty("browser");
+		}else {
+			browser=config.getProperty("browser");
+		}
+		System.out.println(System.getProperty("browser"));
+		System.out.println(browser);
+//		config.setProperty("browser", browser);
 		
-		
-		if(config.getProperty("browser").equals("firefox")){
+		if(browser.equals("firefox")){
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\\\geckodriver.exe");
 			driver=new FirefoxDriver();
 			log.debug("Firefox Launched");
-		}else if(config.getProperty("browser").equals("chrome")){
+		}else if(browser.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
 			driver=new ChromeDriver();
 			log.debug("Chrome Launched");
-		}else if(config.getProperty("browser").equals("IE")){
+		}else if(browser.equals("IE")){
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\\\IEDriverServer.exe");
 			driver=new InternetExplorerDriver();
 			log.debug("IE Launched");
